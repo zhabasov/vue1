@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <script src="https:unpkg.com/vue"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+<h1>{{title}}</h1>
+<div class="notes">
+    <div class="note" v-for="(note,index) in notes" :key="idex">
+<div class="note-header">
+    <p>{{note.title}}</p>
+</div>
+    </div>
+    <div class="note-body">
+        <p>{{note-dicr}}</p>
+        <span>{{note.date}}</span>
+    </div>
+    </div>
+
+    <script>
+        var app = new vue ({
+        el:'#app',
+data: {
+title: 'notes App'
+notes: [
+    {
+        title: 'First note'
+        descr: 'Description for first note',
+        date:new Date(Date.mow()).toLocaleDateString()
+    }  {
+        title: 'second note'
+        descr: 'Description for second note',
+        date:new Date(Date.mow()).toLocaleDateString()
+    }  {
+        title: 'third note'
+        descr: 'Description for third  note',
+        date:new Date(Date.mow()).toLocaleDateString()
+    }
+]
+}
+        })
+    </script>
+</body>
+</html>
